@@ -84,6 +84,14 @@ func main() {
 }
 
 func printUsers(users []User) {
-	fmt.Println(users)
 	fmt.Println("-------")
+	for _, user := range users {
+		fmt.Println("Name:", user.First, user.Last)
+		fmt.Println("Age:", user.Age)
+		fmt.Println("Sayings:")
+		for _, saying := range user.Sayings {
+			fmt.Println("\t", saying)
+		}
+	}
+
 }
